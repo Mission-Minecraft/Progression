@@ -22,9 +22,9 @@ public class ASMTransferCrafting extends AbstractASM {
         accepted.add("slimeknights.mantle.inventory.ContainerMultiModule");
         acceptedMap.put("slimeknights.mantle.inventory.ContainerMultiModule", "notifySlotAfterTransfer");
         accepted.add("net.minecraft.inventory.ContainerPlayer");
-        accepted.add("abd");
+        accepted.add("abu");
         accepted.add("net.minecraft.inventory.ContainerWorkbench");
-        accepted.add("abl");
+        accepted.add("abm");
     }
 
     @Override
@@ -65,7 +65,7 @@ public class ASMTransferCrafting extends AbstractASM {
 
                     @Override
                     public void visitMethodInsn(int opcode, String owner, String name, String desc, boolean itf) {
-                        if ((((name.equals("onSlotChange") || name.equals("func_75220_a")) && desc.equals("(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)V")) || (name.equals("a") && desc.equals("(Ladq;Ladq;)V"))) && !isDone) {
+                        if ((((name.equals("onSlotChange") || name.equals("func_75220_a")) && desc.equals("(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)V")) || (name.equals("a") && desc.equals("(Ladz;Ladz;)V"))) && !isDone) {
                             super.visitMethodInsn(opcode, owner, name, desc, itf);
                             isDone = true;
                             mv.visitVarInsn(ALOAD, 0);

@@ -19,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class VanillaHelper {
-    public static final Field fContainer = ReflectionHelper.findField(InventoryCrafting.class, "eventHandler", "field_70465_c", "c");
+    public static final Field fContainer = ReflectionHelper.findField(InventoryCrafting.class, "eventHandler", "field_70465_c", "d");
     public static final Field fCrafters = ReflectionHelper.findField(Container.class, "listeners", "field_75149_d", "e");
 
     //Initialise all the fields
